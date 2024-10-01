@@ -130,3 +130,6 @@ a4a96.....ef2e69f......
 The dlls can be found here 
 [compiled dlls](https://github.com/alien-keric/compiled-dll)
 
+## reference
+[ms-reference](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672)
+
