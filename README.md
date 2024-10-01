@@ -124,6 +124,9 @@ d-----         9/23/2024   9:36 AM                vmware-SYSTEM
 
 *Evil-WinRM* PS C:\windows\temp> type flag.txt
 a4a96.....ef2e69f......
+
+## addition
+If your interested to proceed futher from here,you can try to read windows registry hives and dump them on your local machine and get access administrator
 ```
 
 # malicious dlls
