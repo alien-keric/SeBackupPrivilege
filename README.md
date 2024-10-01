@@ -1,5 +1,5 @@
 # SeBackupPrivilege
-Fastest method to exploit the SeBackupPrivilege in a windows AD or standalone machine 
+Fastest method to exploit the SeBackupPrivilege in a windows AD or standalone env 
 
 #  abusing SeBackupPrivilege
 ```
