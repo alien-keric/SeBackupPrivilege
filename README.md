@@ -124,3 +124,9 @@ d-----         9/23/2024   9:36 AM                vmware-SYSTEM
 
 *Evil-WinRM* PS C:\windows\temp> type flag.txt
 a4a96.....ef2e69f......
+```
+
+# malicious dlls
+The dlls can be found here 
+
+
