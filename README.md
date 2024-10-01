@@ -30,11 +30,7 @@ This library exposes three PowerShell CmdLets that do just that.
 
 ## This method focus most on reading administrative file such as root.txt  and sensitive info owned by administrator
 
-## step to reproduce this one
-
-
-
-
+##### step to reproduce this one
 STEP 1:  We will need two malicious compiled binaries 
 
 i.e i) SeBackupPrivilegeCmdLets.dll and ii)SeBackupPrivilegeUtils.dll
